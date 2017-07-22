@@ -40,6 +40,7 @@ def anniversary(per_page, current_page, anniversaries=[]):
 		employed_date_obj = datetime.strptime(str(row['start_date']),'%Y-%m-%d')
 		if row['start_date']:
 			groups = row['links']['groups']
+			print groups
 			if groups != None:
 				for group in groups:
 					if group['name'].lower() == 'attorney':
