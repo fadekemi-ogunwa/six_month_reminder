@@ -29,7 +29,7 @@ def anniversary(per_page, current_page, anniversaries=[]):
 	response = requests.request("GET", url, data=payload, headers=headers)
 
 	json_data = json.loads(response.text)
-	total_records = json_data['meta']['count']
+	total_records = json_data['meta']['total_count']
 
 	print "Total records: " + str(total_records) + "\n"
 	print "Current Page: " + str(current_page)
